@@ -1,17 +1,14 @@
-# week-template
+# Week 3: Basic Pandas
 
-> This is a **TEMPLATE** repository for a weekly content including the lab and coding exercises.
+This week is meant to give you an introductory experience with manipulating data. In particular, we will focus on the following:
 
-This week's lab is meant to give you a very basic introduction to the Python coding environment. In particular, we will focus on the following:
-
-- JupyterLab and Markdown
-- Variables and Data Types
-- Operators and Logic
-- Packages, Modules, and Objects
+- basic data manipulation
+- working with missing data
+- aggregating data
+- basic plotting
+- EDA
 
 ## setup
-
-*(As of April 2025)*
 
 1. [Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository) this repository.
 2. [Create a Codespace](https://docs.github.com/en/codespaces/developing-in-a-codespace/creating-a-codespace-for-a-repository#creating-a-codespace-for-a-repository) for your repository. Use this to view the lab notebook and work on your weekly coding exercise.
@@ -22,63 +19,65 @@ This week's lab is meant to give you a very basic introduction to the Python cod
 
 **For the exercises, only update the *apputil.py* file or the *app.py* file.** Updating any other files may affect your autograder feedback.
 
+A [recursive function](https://www.w3schools.com/python/gloss_python_function_recursion.asp) is one which calls itself.
+
+1. When the function is called, your CPU runs through each line of code until the function needs to be called again.
+2. At that point, all variables are saved in memory, and the function runs through each line of code again until the function is called (again, but with a different passed argument), and so on.
+3. Eventually, this process will stop at the "bottom of the **stack**", where the function doesn't get a chance to call itself again (likely because of some condition un/met by the latest passed argument).
+4. Then, your CPU will work its way back up the stack to the final result. For example, take a look at [this visual example](https://realpython.com/python-recursion/#calculate-factorial) of calculating 4!.
+
+When you write these functions, keep two things in mind:
+- You will need a built-in stopping point (i.e., the "bottom"), where your function returns some result before it calls itself.
+- **Don't think too hard about this.** Recursion can be perplexing to conceptualize when writing the code. So, <font color="darkblue">when you call the function inside the function, think about it as a magical "hidden" function that has already done what you want it to do.</font>
+- [Python Tutor](https://pythontutor.com/) ([editor](https://pythontutor.com/visualize.html#mode=edit)) can be a helpful resource for this exercise!
+
 ### exercise 1
 
-In *apputil.py*, ...
+We write "`n` factorial" as `n!`. It is the product of all the numbers up to, and including `n`:
 
----
+`8! = 1 x 2 x 3 x 4 x 5 x 6 x 7 x 8 = 40320`
 
-**A few test cases:**
+In *apputil.py*, use recursion to write a function `factorial(n)` that calculates the factorial of a given integer.
 
-...
+*Test your function using Google or any other tool that can calculate factorials.*
 
 ### exercise 2
 
-...
+The Fibonacci Series (`fib`) starts with 0 and 1. Each of the following numbers are the sum of the previous two numbers in the series:
 
----
+`0 1 1 2 3 5 8 13 21 34 ...`
 
-**A few test cases:**
+So, `fib(9) = 34`.
 
-...
+Write a recursive function that, given `n`, will return the `n`th number of the Fibonacci Series.
+
+*Again, test your function using Google or any other tool that can calculate the Fibonacci Series.*
+
+### exercise 3
+
+TBD ...
 
 ## Packages Available:
 
 The environment for this week is built with the following environment.yml:
 
 ```yml
-name: coding-exercise
+name: week-3
 dependencies:
   - python=3.11
   - pip
   - pip:
+    - ipykernel  # for Jupyter Notebook
     - streamlit
+    - seaborn
     - pandas
     - numpy
 ```
 
 *Note: you are welcome to install more pacakges in your codespace, but they will not be used by the autograder.*
 
----
+# supplemental information
 
-**<font color='darkred'>DELETE THIS SECTION BEFORE SHARING WITH STUDENTS</font>**
-
-## for instructors
-
-### setup and testing on autograder
-
-1. First, make sure you adjust the [autograder settings](https://gradescope-autograders.readthedocs.io/en/latest/autograder_settings.png) accordingly.
-2. **Copy** this repository as a template for each coding exercise.
-3. Uncomment the `autograder` line in the *.gitignore* file.
-4. Update the tests and the app or apputil file accordingly. Create a new github repository for the exercise, and update the Dockerfiles as needed.
-
-### other notes
-
-- If you're running on a recent MacBook, you'll need to use [multi-platform building](https://docs.docker.com/build/building/multi-platform/#simple-multi-platform-build-using-emulation). For this, reference the command commented at the top of the *Dockerfile*.
-- This repository (aside from the *autograder* directory) represents an example of a students's submission.
-- The contents of the *autograder/tests* folder and the *results.json* file are only examples, and should be tailored to the exercise at hand.
-  - Everything else in the *autograder* directory is meant to be generic for all exercises.
-- See the [gradescope Python example](https://github.com/gradescope/autograder_samples/tree/master/python) for more on how this repo is organized.
-- Use this as a *template* for actual exercises. Before sharing the template with students, delete the *autograder* directory, and uncomment the `autograder` line in the *.gitignore* file in actual exercises. This will hide the solutions for students.
-- See [here](https://www.docker.com/blog/docker-best-practices-understanding-the-differences-between-add-and-copy-instructions-in-dockerfiles/) for the difference between `ADD` and `COPY` in Docker, explaining why the latter was used here.
-- Note that you cannot `COPY` from a parent directory, so we need to add the environment update to the *run_autograder* file.
+- Check out [pythonfibonacci](https://www.pythonfibonacci.com/) for more solutions!
+- If the sequence starts with $\{2,\ 1\}$, it is then the [Lucas Sequence](https://en.wikipedia.org/wiki/Lucas_number)
+- This sequence is credited to Leonardo Bonacci (filius Bonacci, 'son of Bonacci'), but can be traced back to early Indian mathematicians (circa 400BC)

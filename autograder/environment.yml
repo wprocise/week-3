@@ -1,9 +1,0 @@
-name: coding-exercise
-dependencies:
-  - python=3.11
-  - pip
-  - pip:
-    - ipykernel  # for Jupyter Notebooks
-    - streamlit
-    - pandas
-    - numpy

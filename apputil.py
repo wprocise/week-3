@@ -30,4 +30,5 @@ def to_binary(w):
         else:
             return to_binary(w // 2) + str(w % 2)
 # Test the function to_binary to return a string of the binary representation of the integer
-print(to_binary(2))
+# Test case: to_binary(10)
+print(to_binary(10))

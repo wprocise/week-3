@@ -18,3 +18,12 @@ print(fib_recursive(5))
 print(fib_recursive(9))
 
 # Exercise 2
+# Write a single recursive function, to_binary, that converts an integer into its binary representation
+# define the function to_binary
+def to_binary(w):
+    return bin(w)
+    # if w is 0, return the string '0'; if w is 1, return the string '1'
+        if w == 0:
+            return '0'
+        elif w == 1:
+            return '1'

@@ -21,8 +21,7 @@ print(fib_recursive(9))
 # Write a single recursive function, to_binary, that converts an integer into its binary representation
 # define the function to_binary
 def to_binary(w):
-    return bin(w)
-    # if w is 0, return the string '0'; if w is 1, return the string '1'
+    # Base case: if w is 0, return the string '0'; if w is 1, return the string '1'
         if w == 0:
             return '0'
         elif w == 1:
@@ -30,5 +29,5 @@ def to_binary(w):
     # Build recursive case: Call the function recursively with the integer divided by 2 and append the remainder of the integer divided by 2
         else:
             return to_binary(w // 2) + str(w % 2)
-# Test the function with the bin() function
-print to_binary(2)
+# Test the function to_binary to return a string of the binary representation of the integer
+print(to_binary(2))

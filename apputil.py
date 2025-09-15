@@ -27,3 +27,6 @@ def to_binary(w):
             return '0'
         elif w == 1:
             return '1'
+    # Build recursive case: Call the function recursively with the integer divided by 2 and append the remainder of the integer divided by 2
+        else:
+            return to_binary(w // 2) + str(w % 2)

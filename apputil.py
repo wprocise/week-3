@@ -13,6 +13,8 @@ def fib_recursive(n):
         return 1
     else:
         return fib_recursive(n-1) + fib_recursive(n-2)
-# Test the function by printing the 5th number in the Fibonacci Series
+# Test the function by printing the 5th and 9th number in the Fibonacci Series
 print(fib_recursive(5))
+print(fib_recursive(9))
 
+# Exercise 2

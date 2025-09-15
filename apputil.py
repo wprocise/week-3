@@ -1,7 +1,7 @@
 import seaborn as sns
 import pandas as pd
 
-# Exercise 1: Write a recursive function that returns the nth number of the Fibonacci Series
+## Exercise 1: Write a recursive function that returns the nth number of the Fibonacci Series
 '''Define the fibonacci function
 fibonacci = fib_recursive'''
 def fib_recursive(n):
@@ -17,7 +17,7 @@ def fib_recursive(n):
 print(fib_recursive(5))
 print(fib_recursive(9))
 
-# Exercise 2
+## Exercise 2
 # Write a single recursive function, to_binary, that converts an integer into its binary representation
 # define the function to_binary
 def to_binary(w):
@@ -32,3 +32,20 @@ def to_binary(w):
 # Test the function to_binary to return a string of the binary representation of the integer
 # Test case: to_binary(10)
 print(to_binary(10))
+
+## Exercise 3: Write a function for the following tasks and name them task_i()
+
+# Read the dataset from the URL into a DataFrame
+url = 'https://github.com/melaniewalsh/Intro-Cultural-Analytics/raw/master/book/data/bellevue_almshouse_modified.csv'
+df_bellevue = pd.read_csv(url)
+
+# Display the first few rows of the DataFrame
+print(df_bellevue.head())
+# Display the summary statistics of the DataFrame
+print(df_bellevue.describe(include='all'))
+# Display the data types of each column in the DataFrame
+print(df_bellevue.dtypes)
+# Check for missing values in the DataFrame
+print(df_bellevue.isnull().sum())
+
+# Task 1: Return a list of all column names, sorted such that the first column has the least missing values, and the last column has the most missing values (use the raw column names)

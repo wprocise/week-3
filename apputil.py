@@ -12,5 +12,7 @@ def fib_recursive(n):
     elif n == 1:
         return 1
     else:
-        return fib_recursive(n-1) and fib_recursive(n-2)
+        return fib_recursive(n-1) + fib_recursive(n-2)
+# Test the function by printing the 5th number in the Fibonacci Series
+print(fib_recursive(5))
 

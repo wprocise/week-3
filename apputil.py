@@ -72,3 +72,8 @@ def task_ii():
     return admissions_per_year
 # Test the function task_ii
 print(task_ii())
+
+# Task 3: Return a series with Index: gender (M or F) and Values: average age for the indexed gender
+# Define the function task_iii
+def task_iii():
+    

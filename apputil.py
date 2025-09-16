@@ -78,9 +78,7 @@ print(task_ii())
 def task_iii():
     # Create the series with index
     df = pd.DataFrame(df_bellevue)
-    # Group the DataFrame
-    average
-    avg_age
+    # Group the DataFrame by 'gender' and calculate the mean age for males and females using groupby.mean()
     avg_age = df_bellevue.groupby('gender')('age').mean()
     return avg_age
 # Test the function task_iii

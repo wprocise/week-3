@@ -76,4 +76,12 @@ print(task_ii())
 # Task 3: Return a series with Index: gender (M or F) and Values: average age for the indexed gender
 # Define the function task_iii
 def task_iii():
+    # Create the series with index
+    df = pd.DataFrame(df_bellevue)
+    # Group the DataFrame
+    average
+    avg_age
+    avg_age = df_bellevue.groupby('gender')('age').mean()
     
+
+

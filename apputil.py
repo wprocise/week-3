@@ -1,5 +1,7 @@
 import seaborn as sns
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 
 ## Exercise 1: Write a recursive function that returns the nth number of the Fibonacci Series
 '''Define the fibonacci function
@@ -49,3 +51,16 @@ print(df_bellevue.dtypes)
 print(df_bellevue.isnull().sum())
 
 # Task 1: Return a list of all column names, sorted such that the first column has the least missing values, and the last column has the most missing values (use the raw column names)
+# Define the function task_i
+def task_i():
+    # Calculate the number of missing values for each column
+    # Convert missing values to null values
+    missing_values = df_bellevue.isnull().sum()
+    # Sort the columns based on the number of missing values in ascending order
+    sorted_columns = missing_values.sort_values().index.tolist()
+    return sorted_columns
+# Test the function task_i
+print(task_i())
+
+# Task 2: Return a data frame with two columns: 'year' and 'total_admissions', where 'year' is the year of admission and 'total_admissions' is the total number of admissions for that year
+

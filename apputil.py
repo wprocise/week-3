@@ -87,6 +87,8 @@ print(task_iii())
 # Task 4: Return a list of the 5 most common professions in order of prevalence (most common first)
 # Define the function task_iv
 def task_iv():
+    # Remove missing values from the 'profession' column
+    professions = df_bellevue['profession'].dropna()
     # Count the occurrences of each profession in the 'profession' column
     profession_counts = df_bellevue['profession'].value_counts()
     # Find the top 5 most common professions
@@ -94,7 +96,3 @@ def task_iv():
     return most_common_professions
 # Test the function task_iv
 print(task_iv())
-
-
-
-

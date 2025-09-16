@@ -66,7 +66,7 @@ print(task_i())
 # Define the function task_ii
 def task_ii():
     # Extract the year from the 'admission_date' column and create a new 'year' column
-    df_bellevue['year'] = pd.to_datetime(df_bellevue['admission_date']).dt.year
+    df_bellevue['year'] = pd.to_datetime(df_bellevue['date_in']).dt.year
     # Group the DataFrame by 'year' and count the number of admissions for each year
     admissions_per_year = df_bellevue.groupby('year').size().reset_index(name='total_admissions')
     return admissions_per_year

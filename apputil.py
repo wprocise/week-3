@@ -84,6 +84,11 @@ def task_iii():
 # Test the function task_iii
 print(task_iii())
 
+# Task 4: Return a list of the 5 most common professions in order of prevalence (most common first)
+# Define the function task_iv
+def task_iv():
+    # Count the occurrences of each profession in the 'profession' column
+    profession_counts = df_bellevue['profession'].value_counts()
 
 
 

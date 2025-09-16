@@ -82,6 +82,9 @@ def task_iii():
     average
     avg_age
     avg_age = df_bellevue.groupby('gender')('age').mean()
-    
+    return avg_age
+# Test the function task_iii
+print(task_iii())
+
 
 
